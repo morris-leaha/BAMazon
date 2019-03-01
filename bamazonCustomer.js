@@ -1,6 +1,7 @@
 // =========== Declare Dependences ===============
 var mysql = require("mysql");
 var inquirer = require("inquirer");
+var cTable = require("console.table");
 
 // =========== Create Connection =================
 
@@ -22,8 +23,9 @@ connection.connect(function(err) {
 function displayInventory () {
     connection.query("SELECT * FROM bamazon_db.products", function(err, res) {
         if (err) throw err;
-        console.log(res);
-        connection.end();
+        var inventory = cTable.getTable(res);
+        console.log("\n" + "ALL INVENTORY: " + "\n" + inventory);
+        // connection.end();
     })
 }
 
