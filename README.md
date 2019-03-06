@@ -16,7 +16,6 @@ An Amazon-like storefront CLI app utilizing MySQL
 4. Create a `.gitignore` file and add the following line of code to that file -- this step will prevent Git from tracking/committing all of the dependencies for each node package:
 ```
 node_modules
-
 ```
 
 5. Use your favorite SQL IDE to execute the queries within both the `schema.sql` and `bamazonSeeds.sql` files to establish the BAMazon store inventory.
@@ -28,7 +27,6 @@ Act like a customer who wants to purchase items from BAMazon by running the foll
 
 ```
 $ node bamazonCustomer.js
-
 ```
 
 * 1. This should immediately display all of the store's current inventory in a table, displaying:
