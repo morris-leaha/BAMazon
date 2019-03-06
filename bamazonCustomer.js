@@ -21,7 +21,7 @@ connection.connect(function (err) {
 // ============= Display Inventory ===============
 
 function displayInventory() {
-    connection.query("SELECT * FROM bamazon_db.products", function (err, res) {
+    connection.query("SELECT item_id, product_name, department_name, price FROM bamazon_db.products", function (err, res) {
         if (err) throw err;
         var inventory = cTable.getTable(res);
         console.log("\n" + "ALL INVENTORY: " + "\n" + inventory);
@@ -66,7 +66,7 @@ function custQuant(id, quantity, price) {
             if (inqRes.itemQuantity <= quantity) {
                 updateDB(id, inqRes.itemQuantity, price); // call function to update the db, passing information already 'grabbed' 
             } else {
-                console.log("Insufficient quantity, there is only: " + quantity + " in stock. Please update your quantity");
+                console.log("Insufficient quantity, there is only: " + quantity + " in stock. Please try again.");
                 itemToBuy(); // call function to start customer from beginning again 
             }
             // maybe another function to ask if they want to purchase anything else (run displayInventory)
