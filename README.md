@@ -39,7 +39,9 @@ $ node bamazonCustomer.js
 
     * Upon the customer entering the item_id of the product they wish to purchase, the app will then check to see if that product is in stock. 
         * If the item is ***not*** in stock, the app will respond with `Sorry, that item is out of stock.` and will automatically reprompt the customer to enter the item_id of a product they wish to purchase (in hopes that the customer will pick another item to purchase).
+        * ![Out-of-Stock](images/bamazon_out-of-stock.gif)
         * If the item ***is*** in stock, the app will then ask the customer how many units they wish to purchase.  
+        * [In-Stock](images/bamazon_in-stock.gif)
 
 3. At this point, the app will then check to see if the store has enough of the product to meet the request.
     * If the customer's request ***exceeds*** the store's stock_quantity, the app will respond with `Insufficient quantity, there is only: <quantity> in stock. Please try again.` and will automatically redirect to step #2. 
