@@ -29,19 +29,19 @@ Act like a customer who wants to purchase items from BAMazon by running the foll
 $ node bamazonCustomer.js
 ```
 
-* 1. This should immediately display all of the store's current inventory in a table, displaying:
+1. This should immediately display all of the store's current inventory in a table, displaying:
     * **item_id** (the unique id for each product)
     * **product_name** (the name of the product)
     * **department_name** 
     * **price** (the cost to the customer)
 
-* 2. After product information is displayed, the app will prompt the user to enter the item_id of the product they would like to purchase.
+2. After product information is displayed, the app will prompt the user to enter the item_id of the product they would like to purchase.
 
     * Upon the customer entering the item_id of the product they wish to purchase, the app will then check to see if that product is in stock. 
         * If the item is *not* in stock, the app will respond with `Sorry, that item is out of stock.` and will automatically reprompt the customer to enter the item_id of a product they wish to purchase (in hopes that the customer will pick another item to purchase).
         * If the item *is* in stock, the app will then ask the customer how many units they wish to purchase.  
 
-* 3. At this point, the app will then check to see if the store has enough of the product to meet the request.
+3. At this point, the app will then check to see if the store has enough of the product to meet the request.
     * If the customer's request exceeds the store's stock_quantity, the app will respond with `Insufficient quantity, there is only: <quantity> in stock. Please try again.` and will automatically redirect to step #2. 
     * If the store's stock_quantity can handle the customer's order, the app will respond with `Sold! Your total is: $<amount>`.  This is meant to validate the current order and to display the total order cost to the customer. 
         * This will also update the store's inventory AND will also end the connection, or terminate the app.  
