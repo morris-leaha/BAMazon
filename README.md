@@ -44,6 +44,6 @@ $ node bamazonCustomer.js
 3. At this point, the app will then check to see if the store has enough of the product to meet the request.
     * If the customer's request ***exceeds*** the store's stock_quantity, the app will respond with `Insufficient quantity, there is only: <quantity> in stock. Please try again.` and will automatically redirect to step #2. 
     * If the store's stock_quantity can handle the customer's order, the app will respond with `Sold! Your total is: $<amount>`.  This is meant to validate the current order and to display the total order cost to the customer. 
-        * **NOTE:**This will also update the store's inventory AND will also end the connection, or terminate the app.  
+        * **NOTE:** This will also update the store's inventory AND will also end the connection, or terminate the app.  
 
 * INSERT GIF HERE!
